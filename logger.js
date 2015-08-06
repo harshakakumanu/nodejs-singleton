@@ -1,6 +1,6 @@
 var colors = require('colors');
 
-var logger = {
+var Logger = {
 
 	log: function(string) {
 		return colors.blue(string);
@@ -16,6 +16,6 @@ var logger = {
 
 module.exports = {
 	getLogger: function(){
-		return logger;
+		return Logger;
 	}
 };

@@ -1,7 +1,16 @@
-var logger = require("./logger.js").getLogger();
+var Logger = new require("./logger.js").getLogger();
 
-console.log('log:',logger.log("log"));
+console.log('log:',Logger.log("log"));
 
-console.log('info:', logger.info("info"));
+console.log('info:', Logger.info("info"));
 
-console.log('error:',logger.error("error"));
+console.log('error:',Logger.error("error"));
+
+
+var Logger2 = new require("./logger.js").getLogger();
+
+console.log('log:',Logger2.log("log-instance"));
+
+console.log('info:', Logger2.info("info-instance"));
+
+console.log('error:',Logger2.error("error-instance"));
