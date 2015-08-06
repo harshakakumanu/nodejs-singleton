@@ -1,16 +1,16 @@
-var Logger = new require("./logger.js").getLogger();
+var Logger = new require("./logger.js");
+var logger1 = Logger.getLogger();
 
-console.log('log:',Logger.log("log"));
+console.log('log:',logger1.log("log"));
 
-console.log('info:', Logger.info("info"));
+console.log('info:', logger1.info("info"));
 
-console.log('error:',Logger.error("error"));
+console.log('error:',logger1.error("error"));
 
+var logger2 = Logger.getLogger();
 
-var Logger2 = new require("./logger.js").getLogger();
+console.log('log:',logger2.log("log-instance"));
 
-console.log('log:',Logger2.log("log-instance"));
+console.log('info:', logger2.info("info-instance"));
 
-console.log('info:', Logger2.info("info-instance"));
-
-console.log('error:',Logger2.error("error-instance"));
+console.log('error:',logger2.error("error-instance"));
