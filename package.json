@@ -1,0 +1,17 @@
+{
+  "name": "nodejspractice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "author": "harsha kakumanu",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^3.2.0",
+    "colors": "^1.1.2",
+    "mocha": "^2.2.5",
+    "require": "^2.4.20"
+  }
+}
