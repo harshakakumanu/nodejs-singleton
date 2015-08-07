@@ -17,15 +17,14 @@ function Logger(){
 	};
 }
 
+var logger = new Logger();
 module.exports = {
-	logger: new Logger(),
-	getLogger: function(){
-		if (this.logger instanceof Logger) {
 
-			console.log("old",this.logger.num);
-			return this.logger
+	getLogger: function(){
+		if (logger instanceof Logger) {
+			return logger
 		} else {
-			console.log("new");
+			this.num++;
 			return new Logger()
 		}
 	}
