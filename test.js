@@ -18,4 +18,13 @@ describe("Module interface & Logger interface test", function() {
 			expect(loggerTest.log("log")).to.equal(colors.blue("log"));
 		});
 	});
+
+	describe("Logger Instance test", function() {
+		it("Checks the instance is old", function() {
+			var logger1 = logger.getLogger();
+			var logger2 = logger.getLogger();
+			expect(logger2.num).to.equal(0);
+		});
+	});
+
 });

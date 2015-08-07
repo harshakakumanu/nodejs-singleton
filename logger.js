@@ -3,6 +3,7 @@ var colors = require('colors');
 
 
 function Logger(){
+	this.num = 0;
 
 	this.log = function(string) {
 		return colors.blue(string);
@@ -15,13 +16,16 @@ function Logger(){
 		return colors.red(string);
 	};
 }
-var logger = new Logger();
-module.exports = {
 
+module.exports = {
+	logger: new Logger(),
 	getLogger: function(){
-		if (logger instanceof Logger) {
-			return logger
+		if (this.logger instanceof Logger) {
+
+			console.log("old",this.logger.num);
+			return this.logger
 		} else {
+			console.log("new");
 			return new Logger()
 		}
 	}
