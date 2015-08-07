@@ -3,6 +3,7 @@ var colors = require('colors');
 
 
 function Logger(){
+
 	this.log = function(string) {
 		return colors.blue(string);
 	};
@@ -14,8 +15,14 @@ function Logger(){
 		return colors.red(string);
 	};
 }
+var logger = new Logger();
 module.exports = {
+
 	getLogger: function(){
-		return new Logger()
+		if (logger instanceof Logger) {
+			return logger
+		} else {
+			return new Logger()
+		}
 	}
 };
